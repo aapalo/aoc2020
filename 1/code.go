@@ -23,13 +23,12 @@ func helper(val int) int {
 }
 
 func partone(s []int) (ans int) {
-  //var ans int
   for _, i := range s {
     for _, j := range s {
       if i != j {
         if (i + j) == 2020 {
           ans = i * j
-          fmt.Println(i, j, ans)
+          //fmt.Println(i, j, ans)
         }
       }
     }
@@ -45,14 +44,14 @@ func parttwo(s []int) (ans int) {
         if ((i!=j) && (j!=k) && (i!=k)) {
           if (i + j + k) == 2020 {
             ans = i * j * k
-            fmt.Println(i, j, k, ans)
+            //fmt.Println(i, j, k, ans)
+            fmt.Println("Part two:", ans)
             return
           }
         }
       }
     }
   }
-  fmt.Println("Part two:", ans)
   return ans
 }
 
@@ -76,12 +75,10 @@ func main() {
     } else {
       fmt.Println(t, "is not an integer.")
     }
-    //fmt.Println(s)
   }
   if err := scanner.Err(); err != nil {
     log.Fatal(err)
   }
-  //var fuelsum int = 0
   if part == 1 {
     partone(s)
   } else if part == 2 {

@@ -17,7 +17,8 @@ samp = 1 # 0 or 1
 
 
 def day(te):
-
+    for t in te:
+        print(t)
     return 0
 
 def day2(te):
